@@ -21,17 +21,18 @@
       <h1>Onlinity ToDo</h1>
     </header>
 
-    <h2 id="welcome">welcome-message</h2>
+    <h2 id="welcomeH2">Welcome <input type="text" id="welcome"></h2>
 
     <div class="register" id="register">
-        <div>
+        <form onsubmit="preventDefault(e)">
             <img src="icon.png" alt="onlinity">
             <h2>Looks like you're new to Onlinity ToDo.</h2>
             <h3>Enter your name:</h3>
             <input type="text" id="username">
             <button type="submit" id="continue">Continue</button>
-        </div>
+        </form>
     </div>
+
 
     <div class="tasks">
         <h3>Your tasks</h3>
@@ -42,15 +43,21 @@
         <button type="submit" id="submit">Add task</button>
     </section>
     <table id="list">
-        <p id="finished">You finished all your tasks!</p>
+        <p id="finished">No tasks.</p>
     </table>
 
+    <section id="finishedTasks">
+        <h3>Finished tasks</h3>
+        <ul id="finishedTasksList">
+        </ul>
+    </section>
+
     <footer>
-    <div class="media">
-        <a href="https://pavle.tk/"><i class="fa-solid fa-user fa-flip" style="--fa-animation-duration: 2s;"></i></a>
-        <a target="_blank" href="mailto:pavle.ignjatovic.08@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 2s;"></i></a>
-    </div>
-    <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
+        <div class="media">
+            <a href="https://pavle.tk/"><i class="fa-solid fa-user fa-flip" style="--fa-animation-duration: 2s;"></i></a>
+            <a target="_blank" href="mailto:pavle.ignjatovic.08@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 2s;"></i></a>
+        </div>
+        <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
     </footer>
 
 </body>

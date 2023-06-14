@@ -8,6 +8,7 @@ html, body{
 }
 
 
+
 h1{
     display: flex;
     justify-content: center;
@@ -34,15 +35,32 @@ header img{
 }
 
 h2, .register h3{
-    margin: auto;
+    margin-left: 100px;
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 15px;
 }
 
-h2{
+@media (width < 450px){
+    #welcomeH2{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: space-around;
+    }
+}
+
+h2, #welcome{
     font-size: 30px;
+}
+
+#welcome{
+    outline: none;
+    border: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: -1px;
 }
 
 h3{
@@ -74,7 +92,7 @@ h3{
     }
 }
 
-.register div{
+.register form{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,7 +100,7 @@ h3{
     width: 90%;
 }
 
-.register div *{
+.register form *{
     margin-top: 20px;
 }
 
@@ -133,6 +151,7 @@ h3{
     display: flex;
 }
 
+
 @media (width < 500px){
     .add{
         flex-direction: column;
@@ -170,12 +189,16 @@ h3{
     margin-bottom: auto;
 }
 
-table{
+table, #finishedTasks{
     margin: auto;
     justify-content: space-between;
     font-size: 20px;
     border-collapse: collapse;
     width: 70%;
+}
+
+#finishedTasks h3{
+    text-align: center;
 }
 
 #finished{
@@ -187,16 +210,31 @@ table{
 }
 
 @media (width < 600px){
-    table{
+    table, #finishedTasks{
         width: 100vw;
         margin-left: 0;
         margin-right: 0;
+    }
+    table td{
+        width: 95%;
     }
 }
 
 table td{
     text-align: left;
     padding: 6px;
+    width: 95%;
+    float: right;
+}
+
+table td textarea{
+    border: none;
+    outline: none;
+    background: none;
+    height: 100%;
+    font-size: 20px;
+    width: 100%;
+    float: left;
 }
 
 table tr:nth-child(even){
@@ -207,9 +245,7 @@ table tr:nth-child(odd){
     background-color: #deedff;
 }
 
-table tr input:first-child{
-    width: 100px;
-}
+
 
 table tr{
     animation: row 1s ease-in-out;
@@ -227,7 +263,7 @@ table tr{
     }
 }
 
-table input{
+table input:not(table tr td textarea){
     width: 20px;
 }
 
